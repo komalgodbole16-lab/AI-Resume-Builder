@@ -65,7 +65,7 @@ const Dashboard = () => {
     console.log("editTitle called!")
     try {
       event.preventDefault()
-      const { data } = await api.put(`/api/resumes/update`, { resumeId: editResumeId, resumeData: JSON.stringify({ title }) }, { headers: { Authorization: token } })
+      const { data } = await api.put(`/api/resumes/update`, { resumeId: editResumeId, resumeData: JSON.stringify({ title }) }, { headers: { Authorization: `Bearer ${token}` } })
       setAllResumes(allResumes.map(resume => resume._id === editResumeId ? { ...resume, title } : resume))
       setTitle('')
       setEditResumeId('')
@@ -80,7 +80,7 @@ const Dashboard = () => {
     try {
       const confirm = window.confirm('Are you sure you want to delete this resume?')
       if (confirm) {
-        const { data } = await api.delete(`/api/resumes/delete/${resumeId}`, { headers: { Authorization: token } })
+        const { data } = await api.delete(`/api/resumes/delete/${resumeId}`, { headers: { Authorization: `Bearer ${token}`} })
         setAllResumes(allResumes.filter(resume => resume._id !== resumeId))
         toast.success(data.message)
       }

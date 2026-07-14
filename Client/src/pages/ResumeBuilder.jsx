@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ResumePreview from '../Components/resumePreview'
+import ResumePreview from '../Components/ResumePreview'
 import { Link, Navigate, useParams} from 'react-router-dom'
 import { dummyResumeData } from '../assets/assets'
 import { ArrowLeftIcon, Briefcase, ChevronLeft, ChevronRight, DownloadIcon, ExpandIcon, EyeIcon, EyeOffIcon, FileText, FolderIcon, GraduationCap, Share2Icon, Sparkles, User} from 'lucide-react'
