@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { dummyResumeData } from '../assets/assets'
-import ResumePreview from '../Components/resumePreview'
+import ResumePreview from '../Components/ResumePreview'
 import Loader from '../Components/Loader'
 import { ArrowLeftIcon } from 'lucide-react'
 import api from '../configs/api'
